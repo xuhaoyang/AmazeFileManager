@@ -195,6 +195,7 @@ import io.reactivex.CompletableObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import kotlin.Unit;
 
 public class MainActivity extends PermissionsActivity
     implements SmbConnectionListener,
@@ -1634,6 +1635,8 @@ public class MainActivity extends PermissionsActivity
               if (!queue.isEmpty()) {
                 mainActivityHelper.search(getPrefs(), queue);
               }
+
+              return Unit.INSTANCE;
             });
     appBarLayout = getAppbar().getAppbarLayout();
 
