@@ -44,7 +44,7 @@ jobs:
       - name: Run test cases
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: jacocoTestPlayDebugUnitTestReport --stacktrace --info
+          arguments: jacocoTestPlayDebugUnitTestReport --stacktrace --debug
       - name: Publish test results
         uses: dorny/test-reporter@v1
         if: always()
